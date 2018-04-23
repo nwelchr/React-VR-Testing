@@ -7,7 +7,6 @@ export default class GazeButton extends React.Component{
     constructor(props){
         super(props);
         this.timeout = 1000,
-        this.progressColor = "#46A032",
         this.onEnter = this.onEnter.bind(this);
         this.onExit = this.onExit.bind(this);
         this.triggerSelection = this.triggerSelection.bind(this);
