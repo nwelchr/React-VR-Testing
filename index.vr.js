@@ -8,8 +8,8 @@ import {
 } from 'react-vr';
 
 import App from './components/app';
-import Gallery from './components/gallery';
-import BottomNavBar from './components/bottom_nav_bar'
+import Gallery from './components/gallery/gallery';
+import BottomNavBar from './components/nav_bar/bottom_nav_bar';
 
 export default class ReactVrApp extends React.Component {
   render() {
