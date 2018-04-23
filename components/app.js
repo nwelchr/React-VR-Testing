@@ -22,7 +22,9 @@ export default class App extends React.Component {
          }}
          style={{position: 'absolute'}}
       >
+      <View style={{layoutOrigin: [-.5, 0]}} >
         {this.props.children}
+        </View>
       </CylindricalPanel>
     );
   }

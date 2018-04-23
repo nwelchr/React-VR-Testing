@@ -11,6 +11,8 @@ export default class BottomNavBar extends React.Component {
   }
 
   render() {
+    const content = this.props.content;
+
     return (
       <View
         style={{
@@ -27,9 +29,7 @@ export default class BottomNavBar extends React.Component {
           justifyContent: "space-around"
         }}
       >
-        <NavBarItem>Link</NavBarItem>
-        <NavBarItem>Link</NavBarItem>
-        <NavBarItem>Link</NavBarItem>
+        {content.map(el => <NavBarItem>{el.label}</NavBarItem>)}
       </View>
     );
   }

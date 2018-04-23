@@ -13,15 +13,19 @@ import BottomNavBar from './components/nav_bar/bottom_nav_bar';
 
 export default class ReactVrApp extends React.Component {
   render() {
+    content = [
+      {label: 'Home', link: '/home'},
+      {label: 'About', link: '/about'},
+      {label: 'Gallery', link: '/gallery'}
+    ]
+
     return (
       <View>
         <Pano source={asset('space.jpg')}/>
         <App>
-          <View style={{layoutOrigin: [-.5, 0]}} >
           <Gallery />
-          </View>
         </App>
-        <BottomNavBar />
+        <BottomNavBar content={content}/>
       </View>
     );
   }
