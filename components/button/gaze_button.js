@@ -6,9 +6,7 @@ import {
 export default class GazeButton extends React.Component{
     constructor(props){
         super(props);
-        this.timeout = 1000,
-        this.onEnter = this.onEnter.bind(this);
-        this.onExit = this.onExit.bind(this);
+        this.timeout = 1000
         this.triggerSelection = this.triggerSelection.bind(this);
     }
 
@@ -35,13 +33,10 @@ export default class GazeButton extends React.Component{
         const { style } = this.props;
         return ( 
             <VrButton 
-                onEnter={this.onEnter} 
-                onExit={this.onExit}
+                onEnter={this.onEnter.bind(this)} 
+                onExit={this.onExit.bind(this)}
                 style={style} 
-                onClick={() => {
-                    this.triggerSelection();
-                    this.onExit();
-                }}
+                onClick={this.triggerSelection}
             >
                 {this.props.children}
             </VrButton>
