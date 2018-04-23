@@ -6,37 +6,40 @@ export default class NavBarItem extends React.Component {
     super(props);
 
     this.state = {
-        backgroundColor: '#333',
-        opacity: '.7'
+        backgroundColor: '#222',
+        opacity: '.8',
+        fontSize: '.1'
     }
   }
 
   handleEnter(e) {
     this.setState({
-        backgroundColor: '#555',
+        backgroundColor: '#444',
         opacity: '.9',
+        fontSize: '.11'
     });
   }
 
   handleExit(e) {
     this.setState({
-        backgroundColor: '#333',
-        opacity: '.7',
+        backgroundColor: '#222',
+        opacity: '.8',
+        fontSize: '.1'
     });
   }
 
   render() {
 
-    const { backgroundColor } = this.state;
+    const { backgroundColor, opacity, fontSize } = this.state;
 
     return (
       <Text
         style={{
           flex: 1,
           backgroundColor,
-          opacity: .5,
+          opacity,
+          fontSize,
           color: "#FFF",
-          fontSize: .1,
           textAlign: "center",
           textAlignVertical: "center",
           height: '100%',
