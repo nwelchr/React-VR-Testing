@@ -14,9 +14,9 @@ export default class BottomNavBar extends React.Component {
   }
 
   render() {
-    const { content, changeGallery, currGallery } = this.props;
+    const { content, changeGallery, gallery } = this.props;
 
-    // console.log(currGallery.type.name.toLowercase());
+    const currGallery = gallery.type.name.toLowerCase()
 
     return (
       <View
@@ -35,7 +35,12 @@ export default class BottomNavBar extends React.Component {
         }}
       >
         {content.map((el, idx) => (
-        <NavBarItem changeGallery={changeGallery} link={el.link} key={idx}>
+        <NavBarItem 
+          changeGallery={changeGallery} 
+          currGallery={currGallery}
+          link={el.link} 
+          key={idx}
+          >
             {el.label}
           </NavBarItem>)
         )}

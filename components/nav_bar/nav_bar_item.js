@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { asset, Animated, Text } from "react-vr";
+import { asset, Animated, Text, Image } from "react-vr";
 
 import GazeButton from '../button/gaze_button';
 
@@ -7,11 +7,30 @@ export default class NavBarItem extends React.Component {
   constructor(props) {
     super(props);
 
+    const isSelected = this.props.currGallery === this.props.link;
+
+    const backgroundColor = isSelected ? '#444' : '#222';
+    const opacity = isSelected ? .9 : .8;
+    const fontSize = isSelected ? .11 : .1;
+
     this.state = {
+        backgroundColor,
+        opacity,
+        fontSize,
+        isSelected
+    }
+
+    // console.log(this.props.currGallery, this.props.link);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currGallery !== nextProps.link && this.state.isSelected) {
+    this.setState({
         backgroundColor: '#222',
         opacity: .8,
         fontSize: .1,
         isSelected: false
+      });
     }
   }
 

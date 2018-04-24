@@ -4,7 +4,7 @@ import { Easing } from "react-native";
 
 import VRText from "./vr_text.js";
 
-export default class Gallery extends React.Component {
+export default class Gallery1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};

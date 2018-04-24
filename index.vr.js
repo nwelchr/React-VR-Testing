@@ -10,7 +10,7 @@ import {
 import { Match, Route, MemoryRouter as Router } from 'react-router';
 
 import App from './components/app';
-import Gallery from './components/gallery/gallery';
+import Gallery1 from './components/gallery/gallery1';
 import Gallery2 from './components/gallery/gallery2';
 import Gallery3 from './components/gallery/gallery3';
 import BottomNavBar from './components/nav_bar/bottom_nav_bar';
@@ -19,7 +19,7 @@ export default class ReactVrApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      gallery: <Gallery/>
+      gallery: <Gallery1/>
     }
 
     this.changeGallery = this.changeGallery.bind(this);
@@ -29,7 +29,7 @@ export default class ReactVrApp extends React.Component {
     let gallery;
     switch(galleryId) {
       case 'gallery1':
-        gallery = <Gallery/>;
+        gallery = <Gallery1/>;
         break;
       case 'gallery2':
         gallery = <Gallery2/>;
@@ -40,7 +40,6 @@ export default class ReactVrApp extends React.Component {
     }
 
     this.setState({gallery});
-    console.log(this.state);
   }
 
   render() {
@@ -59,7 +58,7 @@ export default class ReactVrApp extends React.Component {
         <BottomNavBar 
           content={content}
           changeGallery={this.changeGallery.bind(this)}
-          currGallery={this.state.gallery}
+          gallery={this.state.gallery}
           />
       </View>
     );
