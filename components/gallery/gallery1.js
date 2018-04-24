@@ -5,8 +5,8 @@ import { Easing } from "react-native";
 import VRText from "./vr_text.js";
 
 export default class Gallery1 extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { slideLeft: new Animated.Value(-1024), fadeIn: new Animated.Value(0)};
   }
 
@@ -33,7 +33,10 @@ export default class Gallery1 extends React.Component {
     ]).start();
   }
 
-  componentWillUnmount() {
+  ci
+
+  componentReceiveProps() {
+    console.log('hi');
     Animated.sequence([
       Animated.parallel([
         Animated.timing(

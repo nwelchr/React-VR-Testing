@@ -25,9 +25,9 @@ function init(bundle, parent, options) {
   // if (gearVr) {
     vr = new VRInstance(bundle, 'ReactVrApp', parent, {
       // Add custom options here
-      raycasters: [
-        GearVRRaycaster
-      ],
+      // raycasters: [
+      //   GearVRRaycaster
+      // ],
       cursorVisibility: 'visible',
       ...options,
     });
