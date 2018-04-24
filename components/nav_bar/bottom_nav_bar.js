@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Animated, asset, Image, Text } from "react-vr";
+import { View, Animated, asset, Image, Text, VrButton } from "react-vr";
 import { Easing } from "react-native";
 
+import { NavLink } from 'react-router-dom';
+
 import NavBarItem from "./nav_bar_item.js";
+
 
 export default class BottomNavBar extends React.Component {
   constructor(props) {
@@ -11,7 +14,9 @@ export default class BottomNavBar extends React.Component {
   }
 
   render() {
-    const content = this.props.content;
+    const { content, changeGallery, currGallery } = this.props;
+
+    // console.log(currGallery.type.name.toLowercase());
 
     return (
       <View
@@ -29,7 +34,11 @@ export default class BottomNavBar extends React.Component {
           justifyContent: "space-around"
         }}
       >
-        {content.map(el => <NavBarItem>{el.label}</NavBarItem>)}
+        {content.map((el, idx) => (
+        <NavBarItem changeGallery={changeGallery} link={el.link} key={idx}>
+            {el.label}
+          </NavBarItem>)
+        )}
       </View>
     );
   }

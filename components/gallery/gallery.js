@@ -1,48 +1,38 @@
-import React from 'react';
-import {
-    View,
-    Animated,
-    asset,
-    Image,
-    Text
-} from 'react-vr'; 
-import { Easing } from 'react-native'; 
+import React from "react";
+import { View, Animated, asset, Image, Text } from "react-vr";
+import { Easing } from "react-native";
 
-import VRText from './vr_text.js'; 
+import VRText from "./vr_text.js";
 
 export default class Gallery extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-        };
-    }
-
-    render() {
-
-        return (
-            <View style={{
-                opacity: 1,
-                width: 2048,
-                height: 800,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                }} >
-                <VRText>ONE</VRText>
-                <VRText>TWO</VRText>
-                <VRText>THREE</VRText>
-                <VRText>FOUR</VRText>
-                <VRText>FIVE</VRText>
-                <VRText>SIX</VRText>
-            </View>
-        );
-    }
+  render() {
+    return (
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          height: "100%"
+        }}
+      >
+        <VRText>EVERY</VRText>
+        <VRText>DAY</VRText>
+        <VRText>IS</VRText>
+        <VRText>A</VRText>
+        <VRText>GOOD</VRText>
+        <VRText>DAY</VRText>
+      </View>
+    );
+  }
 }
 
-
-
-{/* <View style={{
+{
+  /* <View style={{
     opacity: 1,
     width: 4096,
     height: 800,
@@ -51,36 +41,36 @@ export default class Gallery extends React.Component {
     alignItems: 'center',
     // justifyContent: 'space-evenly',
     }}
-> */}
-// </View> 
+> */
+}
+// </View>
 
+// updateStage(input) {
+//     if(this.state.showButton === false) {
+//       this.setState({showButton: true});
+//     }
+//   switch (input) {
+//       case 1:
+//         this.setState({borderWidths: [0.05, 0, 0, 0, 0, 0]});
+//         break;
+//       case 2:
+//         this.setState({borderWidths: [0, 0.05, 0, 0, 0, 0]});
+//         break;
+//       case 3:
+//         this.setState({borderWidths: [0, 0, 0.05, 0, 0, 0]});
+//         break;
+//       case 4:
+//         this.setState({borderWidths: [0, 0, 0, 0.05, 0, 0]});
+//         break;
+//       case 5:
+//         this.setState({borderWidths: [0, 0, 0, 0, 0.05, 0]});
+//         break;
+//       case 6:
+//         this.setState({borderWidths: [0, 0, 0, 0, 0, 0.05]});
+//         break;
+//     }
+//   }
 
-    // updateStage(input) {
-    //     if(this.state.showButton === false) {
-    //       this.setState({showButton: true});
-    //     }
-    //   switch (input) {
-    //       case 1:
-    //         this.setState({borderWidths: [0.05, 0, 0, 0, 0, 0]});
-    //         break;
-    //       case 2:
-    //         this.setState({borderWidths: [0, 0.05, 0, 0, 0, 0]});
-    //         break;
-    //       case 3:
-    //         this.setState({borderWidths: [0, 0, 0.05, 0, 0, 0]});
-    //         break;
-    //       case 4:
-    //         this.setState({borderWidths: [0, 0, 0, 0.05, 0, 0]});
-    //         break;
-    //       case 5:
-    //         this.setState({borderWidths: [0, 0, 0, 0, 0.05, 0]});
-    //         break;
-    //       case 6:
-    //         this.setState({borderWidths: [0, 0, 0, 0, 0, 0.05]});
-    //         break;
-    //     }
-    //   }
-
-    // updateScene() {
-    //     this.setState({color1: "#D8DAF1", color2: "#A482DF", text: "Watch Video"});
-    // }
+// updateScene() {
+//     this.setState({color1: "#D8DAF1", color2: "#A482DF", text: "Watch Video"});
+// }

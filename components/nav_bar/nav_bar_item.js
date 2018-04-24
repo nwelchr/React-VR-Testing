@@ -10,32 +10,42 @@ export default class NavBarItem extends React.Component {
     this.state = {
         backgroundColor: '#222',
         opacity: .8,
-        fontSize: .1
+        fontSize: .1,
+        isSelected: false
     }
   }
 
   handleHover(e) {
+    if (!this.state.isSelected) {
     this.setState({
         backgroundColor: '#333',
         opacity: .85,
         fontSize: .1
     });
   }
+  }
 
   handleLeave(e) {
+    if (!this.state.isSelected) {
     this.setState({
         backgroundColor: '#222',
         opacity: .8,
         fontSize: .1
     });
   }
+  }
 
   handleTrigger() {
     this.setState({
       backgroundColor: '#444',
       opacity: .9,
-      fontSize: .11
+      fontSize: .11,
+      isSelected: true
   });
+
+  // When the gaze button is triggered, it changes the 'link'
+  this.props.changeGallery(this.props.link);
+
   }
 
   render() {
