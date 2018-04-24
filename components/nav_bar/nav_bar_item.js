@@ -19,8 +19,6 @@ export default class NavBarItem extends React.Component {
         fontSize,
         isSelected
     }
-
-    // console.log(this.props.currGallery, this.props.link);
   }
 
   componentWillReceiveProps(nextProps) {
